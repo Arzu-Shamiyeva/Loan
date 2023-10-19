@@ -6,7 +6,7 @@ public class RetailCustomer extends Customer{
 
     @Override
     public double discountForLoanCommission() {
-        return 2;
+        return this.getCustomerLoan().getCommLoan()-0.02;
     }
 
     @Override

@@ -1,6 +1,7 @@
 public abstract class Loan{
     private int loanId;
     private double loanAmount;
+    private double commLoan;
 
     public Loan(int loanId, double loanAmount) {
         this.loanId = loanId;
@@ -24,4 +25,8 @@ public abstract class Loan{
     public void setLoanAmount(double loanAmount) {
         this.loanAmount = loanAmount;
     }
+
+    public abstract double getCommLoan();
+
+
 }
