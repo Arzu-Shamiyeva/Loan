@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Loan{
     private int loanId;
     private double loanAmount;
@@ -28,5 +30,15 @@ public abstract class Loan{
 
     public abstract double getCommLoan();
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Loan loan)) return false;
+        return loanId == loan.loanId && Double.compare(loanAmount, loan.loanAmount) == 0 && Double.compare(commLoan, loan.commLoan) == 0;
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(loanId, loanAmount, commLoan);
+    }
 }

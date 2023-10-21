@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Customer implements DiscountService{
     private int customerId;
     private String customerName;
@@ -33,5 +35,17 @@ public abstract class Customer implements DiscountService{
 
     public void setCustomerLoan(Loan customerLoan) {
         this.customerLoan = customerLoan;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Customer customer)) return false;
+        return customerId == customer.customerId && Objects.equals(customerName, customer.customerName) && Objects.equals(customerLoan, customer.customerLoan);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId, customerName, customerLoan);
     }
 }
