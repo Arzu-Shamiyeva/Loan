@@ -5,6 +5,9 @@ public abstract class Customer implements DiscountService{
     private String customerName;
     private Loan customerLoan;
 
+    public Customer() {
+    }
+
     public Customer(int customerId, String customerName, Loan customerLoan) {
         this.customerId = customerId;
         this.customerName = customerName;

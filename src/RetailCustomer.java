@@ -1,6 +1,6 @@
 public class RetailCustomer extends Customer{
 
-    public RetailCustomer(int customerId, String customerName, Loan customerLoan) {
+    public RetailCustomer(int customerId, String customerName, RetailLoan customerLoan) {
         super(customerId, customerName, customerLoan);
     }
 

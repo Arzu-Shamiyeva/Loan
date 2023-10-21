@@ -16,5 +16,10 @@ public class Main {
 
         System.out.println(customer1.getCustomerLoan().getLoanAmount()*(customer1.getCustomerLoan().getCommLoan()-customer1.discountForLoanCommission())/100);
 
+        Customer customer2 = new SMECustomer(1, "Arzu", new SMELoan(22, 2000));
+
+
+        System.out.println(customer2.getCustomerLoan().getLoanAmount()*(customer2.getCustomerLoan().getCommLoan()-customer2.discountForLoanCommission())/100);
+
     }
 }

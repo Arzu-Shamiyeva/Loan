@@ -5,6 +5,9 @@ public abstract class Loan{
     private double loanAmount;
     private double commLoan;
 
+    public Loan() {
+    }
+
     public Loan(int loanId, double loanAmount) {
         this.loanId = loanId;
         this.loanAmount = loanAmount;

@@ -1,12 +1,15 @@
-public class CorpCustomer extends Customer {
+public class SMECustomer extends Customer{
 
-    public CorpCustomer(int customerId, String customerName, CorpLoan customerLoan) {
+    public SMECustomer() {
+    }
+
+    public SMECustomer(int customerId, String customerName, SMELoan customerLoan) {
         super(customerId, customerName, customerLoan);
     }
 
     @Override
     public double discountForLoanCommission() {
-        return 0.5;
+        return 1;
     }
 
     @Override
