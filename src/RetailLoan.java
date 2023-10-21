@@ -5,6 +5,6 @@ public class RetailLoan  extends Loan{
     }
 
     public double getCommLoan() {
-        return 0.05;
+        return 5;
     }
 }

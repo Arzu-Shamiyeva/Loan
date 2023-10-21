@@ -8,13 +8,13 @@ public class Main {
         Customer customer = new CorpCustomer(1, "Arzu", new CorpLoan(11, 1000));
 
 
-        System.out.println(customer.getCustomerLoan().getLoanAmount()*customer.discountForLoanCommission());
+        System.out.println(customer.getCustomerLoan().getLoanAmount()*(customer.discountForLoanCommission()+customer.getCustomerLoan().getCommLoan())/100);
 
 
         Customer customer1 = new RetailCustomer(1, "Arzu", new RetailLoan(22, 2000));
 
 
-        System.out.println(customer1.getCustomerLoan().getLoanAmount()*customer1.discountForLoanCommission());
+        System.out.println(customer1.getCustomerLoan().getLoanAmount()*(customer1.discountForLoanCommission()+customer1.getCustomerLoan().getCommLoan())/100);
 
     }
 }
